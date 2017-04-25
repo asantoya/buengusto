@@ -234,8 +234,6 @@ body {
     margin: -20px;
   }
   .carousel {
-    margin-left: -20px;
-    margin-right: -20px;
     .container {}
     .item, img {
       height: 300px;
@@ -374,6 +372,7 @@ div.item img{
 
 .article-section{
   background-color: #f7f7f7;
+  margin: 0px;
 }
 
 
