@@ -32,7 +32,12 @@
                 <li><a href="http://getbootstrap.com/2.3.2/examples/carousel.html#about">CATEGORIAS</a></li>
                 <li><a href="http://getbootstrap.com/2.3.2/examples/carousel.html#contact">NOSOTROS</a></li>
                 <li><a href="http://getbootstrap.com/2.3.2/examples/carousel.html#contact">CONTACTO</a></li>
-                <li><%= link_to "LOGIN", new_user_session_path %></li>
+                <% if user_signed_in? %>
+                  <li><%= link_to current_user.email, edit_user_registration_path %></li>
+                <%else%>
+                  <li><%= link_to "LOGIN", new_user_session_path %></li>
+                <% end %>
+                
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
